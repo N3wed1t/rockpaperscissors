@@ -1,3 +1,6 @@
+
+playerScore = 0;
+comScore = 0;
 function getComputerChoice(){
     const data = ['Rock', 'Paper', 'Scissors'];
     const result = data[Math.floor(Math.random() * 3)];
@@ -38,10 +41,21 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+const buttons = document.querySelectorAll('button');
+const result = document.querySelector('.result');
 
-function game(){
-    playerScore = 0;
-    comScore = 0;
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        result.textContent = playRound(button.id.toString(), getComputerChoice());
+    })
+});
+
+
+
+
+
+/*function game(){
+    
     for(let i = 0;i < 5; ){
         let computerSelection = getComputerChoice();
         let playerSelection = prompt("Choose: Rock, Paper, Scissors");
@@ -54,4 +68,4 @@ function game(){
 }
 
 game();
-
+*/
