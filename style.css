@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 0px;
 }
@@ -15,6 +15,7 @@ html, body {
     width: 100%;
     height: 40%;
     gap: 50px;
+    position: absolute;
     
 }
 
@@ -25,6 +26,7 @@ button {
     border-radius: 10px;
     font-size: 30px;
     transition: all 0.15s;
+    flex: 0 1 auto;
 }
 
 
@@ -33,4 +35,32 @@ button:hover {
     height: 350px;
     font-size: 35px;
 
+}
+
+button:active {
+    width: 320px;
+    height: 320px;
+    font-size: 32px;
+    background-color: rgb(205, 205, 205);
+}
+
+.result , .score{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: alias;
+    position: absolute;
+}
+
+.result {
+    color: white;
+    bottom: 20%;
+}
+
+.score {
+    top: 20%;
+}
+
+.summary {
+    position: absolute;
+    top: 10%;
 }
